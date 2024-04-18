@@ -1,0 +1,1 @@
+window.alert("Começando meus estudos de JavaScipr")
