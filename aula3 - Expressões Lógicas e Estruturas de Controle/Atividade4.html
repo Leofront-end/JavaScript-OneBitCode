@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var NumeroAleatorio = Math.floor(Math.random() * 100)+1
+
+        let Palpite = parseInt(prompt("Digite um Numero:"))
+        let c = 10
+        for (; c >= 1; c--){
+            alert(`Falta ${c} chances`)
+            Palpite = parseInt(prompt("Tente Novamente:"))
+
+            if (Palpite == NumeroAleatorio){
+                alert("Parabéns você acertou")
+                break
+            } else if (Palpite > NumeroAleatorio) {
+                alert("Menor")
+            } else {
+                alert("Maior")
+            }
+        }
+        if (c < 1){
+            alert(`As suas tentativas acabaram`)
+            alert(`O numero da maquina era ${NumeroAleatorio}`)
+        }
+    </script>
+</body>
+</html>
