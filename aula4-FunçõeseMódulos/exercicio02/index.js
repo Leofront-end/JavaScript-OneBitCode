@@ -1,4 +1,4 @@
-import kebabCase from "./node_modules/lodash";
+import kebabCase from "lodash";
 
 
 let str1 = kebabCase("GEEKS FOR GEEKS");

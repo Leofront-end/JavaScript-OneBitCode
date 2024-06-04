@@ -1,5 +1,4 @@
 export function dobro(d){
-
     return d*2
 }
 
