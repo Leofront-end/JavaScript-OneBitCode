@@ -1,11 +1,36 @@
 var mediaPonderada = []
 var media = []
+let SomaMedia = 0
+let SomaMediaPonderada = 0
+//Laço de Repetição
 do {
-    media = prompt("Digite um numero da media: ")
-    var quantidade = prompt("Digite um valor para quantidade: ")
-    mediaPonderada.push(media)
-    media.push(media)
+    let ValorMedia = parseFloat(prompt("Digite um numero da media: "))
+    media.push(ValorMedia)
+    let quantidade = parseFloat(prompt("Digite um valor para quantidade: "))
+    let valores = ValorMedia * quantidade
+    mediaPonderada.push(valores)
+    
     var resposta = prompt("Deseja continuar? [S/N]")
 } while (resposta.toLowerCase() !== 'n');
 
-console.log(mediaPonderada)
+//soma da Media Ponderada
+const SomandoMediaPonderada = mediaPonderada.map(function SomandoValoresDaMediaPonderada(elementoAtual){
+    SomaMediaPonderada = elementoAtual + SomaMediaPonderada
+    return SomaMediaPonderada
+})
+
+var ultimoMediaPonderada = SomandoMediaPonderada[SomandoMediaPonderada.length-1]
+
+//soma da Media de Baixo
+const SomaDasMedias = media.map(function Somando(elementoAtual){
+    
+    SomaMedia = elementoAtual + SomaMedia
+    return SomaMedia
+})
+var ultimoMedia = SomaDasMedias[SomaDasMedias.length-1]
+
+//Dividir os Valores
+let divisão = ultimoMediaPonderada/ultimoMedia
+
+//Resultado
+console.log(`O valor da Media ponderada é ${divisão}`)
