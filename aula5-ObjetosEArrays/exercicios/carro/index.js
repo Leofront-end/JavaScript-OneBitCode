@@ -8,6 +8,7 @@ veiculo.velocidade = parseFloat(prompt("Digite a velocidade (em Km/h):"))
 console.log(veiculo)
 console.log(veiculo.velocidade)
 
+// Acelerar
 function Aumentar(){
     veiculo.AumentarVelocidade = parseFloat(prompt("Digite um novo valor (em Km/h):"))
     if (veiculo.AumentarVelocidade > veiculo.velocidade){
@@ -19,6 +20,7 @@ function Aumentar(){
     AdicionarPassageiro()
 }
 
+// Diminuir velocidade
 function Diminuir(){
     veiculo.DiminuirVelocidade = parseFloat(prompt("Digite um novo valor (em Km/h):"))
     if (veiculo.DiminuirVelocidade < veiculo.velocidade){
@@ -30,6 +32,7 @@ function Diminuir(){
     AdicionarPassageiro()
 }
 
+//Adicionando Pessoas
 function AdicionarPassageiro(){
     let Adicionar = prompt("Deseja Adicionar passageiro [S/N]:")
     Adicionar = Adicionar.toLowerCase()
@@ -44,7 +47,7 @@ function AdicionarPassageiro(){
     }
 }
 
-
+//Menu
 do {
     var opcoes = parseInt(prompt("1- Adicionar Velocidade\n2-Diminuir Velocidade\n3-Sair"))
     if (opcoes == 1 ) {
