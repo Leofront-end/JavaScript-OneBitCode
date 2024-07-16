@@ -36,7 +36,7 @@ let divisão = ultimoMediaPonderada/ultimoMedia
 
 //Resultado
 if (isNaN(divisão)){
-    console.log('erro')
+    alert('erro')
 } else {
-    console.log(`O valor da Media ponderada é ${divisão.toFixed(2)}`)
+    alert(`O valor da Media ponderada é ${divisão.toFixed(2)}`)
 }
