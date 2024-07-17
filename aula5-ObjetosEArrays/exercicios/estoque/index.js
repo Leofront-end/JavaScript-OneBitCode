@@ -2,15 +2,23 @@ let estoque = []
 
 function Adicionar(){
 
-    estoque.push({nome:prompt("Digite o nome:"), quantidade:prompt("Digite a quantidade:")})
+    let nome = prompt("Digite o nome:")
+    let quantidade = prompt("Digite a quantidade:")
+    if (isNaN(quantidade)|| quantidade <= 0){
+        alert('n inv')
+        return
+    }
+    estoque.push({nome,quantidade})
+    alert(`${nome} com ${quantidade} quantidade(s) foi adicionado`)
     
-    console.log(estoque)
     
 }
+
 
 function Listar() {
     if (estoque.length == 0){
         alert('Estoque Vazio')
+        return
     }
     estoque.forEach(function (estoquinho, indice){
         alert(`${indice} - ${estoquinho.nome} e ${estoquinho.quantidade}`)
@@ -19,9 +27,17 @@ function Listar() {
 
 function Alterar() {
     let Pesquisar = prompt("O nome que deseja procurar:")
+    if (Pesquisar.length == 0 ){
+        alert('Digite alto')
+        return
+    }
     estoque.find(function(estocando) {
         if (estocando.nome == Pesquisar){
             estocando.quantidade = prompt("Digite a nova quantidade")
+            if (isNaN(estoque.quantidade)){
+                alert('Não é número')
+                return
+            }
             return estocando.quantidade
         } else {
             alert("Nome não encontrado, tente novamente")
@@ -33,18 +49,14 @@ function Remover(){
     let Pesquisa = prompt("Digite o nome que está procurando: ")
     
 
-    var encontrando = estoque.find(function (NomeEstoque, indice) {
+    estoque.find(function (NomeEstoque, indice) {
         if (NomeEstoque.nome == Pesquisa){
-            NomeEstoque = estoque
+            
+            estoque.splice(indice, 1)
             alert(`Removendo ...`)
-            return NomeEstoque.splice(indice, 1)
+            return
         }
-        return null
     })
-
-    if (encontrando == null){
-        alert('não encontrado')
-    }
 }
 
 do {
