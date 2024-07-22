@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 - DOM</title>
+    <style>
+        .bg-blue {
+            background-color: #008cff86;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo" class="bg-blue">Aula 6 - DOM</h1>
+
+    <form id="CadastrarJogo">
+        <h3>Cadastrar novo jogo</h3>
+        <label for="nome">Nome do Jogo</label>
+        <input type="text" name="nome" id="nome">
+        <br><br>
+        <label for="ano">Ano de Lançamento</label>
+        <input type="text" name="ano" id="ano">
+        <br><br>
+        <label for="genero">Gênero:</label>
+        <input type="text" name="genero" id="genero">
+        <br><br>
+        <button type="submit">Adicionar Jogo</button>
+    </form>
+    <hr>
+    <h2>Lista de Jogos</h2>
+    <ul id="ListaDeJogos"></ul>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
