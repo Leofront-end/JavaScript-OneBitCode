@@ -3,12 +3,11 @@ let contador = 0
 const intervalId = setInterval(function () {
     console.log(`Executado ${contador} vezes apos 2 s`)
     contador++
-    if(contador >= 6){
-        clearInterval(intervalId)
-    }
 }, 2 * 1000)
 
-
+if(contador >= 6){
+    clearInterval(intervalId)
+}
 
 
 
