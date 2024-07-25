@@ -1,6 +1,5 @@
 const form = document.querySelector("form")
 
-
 function adicionar(tarefa) {
     const listaElementos = document.createElement("li")
 
@@ -20,7 +19,7 @@ function Concluida(listaElementos){
     concluir.addEventListener("click", function(){
         listaElementos.classList.toggle("conclusao")
     })
-    listaElementos.appendChild(concluir)
+    listaElementos.append(concluir)
 }
 
 function Remove(listaElementos){
@@ -37,6 +36,8 @@ function Remove(listaElementos){
 form.addEventListener("submit", function (evento) {
     evento.preventDefault()
     const tarefa = document.getElementById("tarefa").value
-    adicionar(tarefa)
+    if (tarefa !== ""){
+        adicionar(tarefa)
+    }
     evento.target.reset()
 })

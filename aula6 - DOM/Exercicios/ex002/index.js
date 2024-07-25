@@ -9,6 +9,8 @@ const formulario = document.querySelector("form")
 formulario.addEventListener("submit",function (evento) {
     evento.preventDefault()
     const nome = document.getElementById("nome").value
-    AdicionarFilme(nome)
+    if (nome !== ""){
+        AdicionarFilme(nome)
+    }
     evento.target.reset()
 })
