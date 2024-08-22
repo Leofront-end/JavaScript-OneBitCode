@@ -6,19 +6,28 @@ function tempo(milisegundos){
     })
 }
 
-async function Executando(){
-    alert("Iniciando")
 
+
+async function gerarNumeroAleatorio(){
     await tempo(3000)
-    alert("3s")
-
-    await tempo(5000)
-    alert("5s")
-
-    await tempo(7000)
-    alert("7s")
+    return Math.floor(Math.random() * 100)
 }
 
+async function gerarNumerosAleatorios(quantidade){
+    const numerosAleatorios = []
 
-Executando()
+    for(let i = 1;i <= quantidade;i++){
+        console.log(`Gerando ${i} numero${i>1?'s':''}`)
+        const numero = await gerarNumeroAleatorio()
+        numerosAleatorios.push(numero)
+    }
 
+    return numerosAleatorios
+}
+
+async function executar(){
+    const numeros = await gerarNumerosAleatorios(5)
+    console.log(numeros) 
+}
+
+executar()

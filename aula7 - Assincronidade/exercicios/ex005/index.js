@@ -1,23 +1,33 @@
-function ID(numeros){
-    return new Promise(function(resolve){
+function ID(id){
+    /*Arrow function
+    (args) =>  {return 42}    
+    */
+
+    return new Promise((resolve) => {
         const usuario = {
-            id: numeros,
-            nome: `Usario ${numeros}`,
-            email: `usuario${numeros}@email.com`
-        }
+            id,
+            nome: `Usario ${id}`,
+            email: `usuario${id}@email.com`
+        };
         resolve(usuario)
     })
 }
-async function IDsQualquer(){
-    var lista = []
-    for (let contador = 1; contador <= 5; contador++){
-        const numeroAleatorio = Math.floor(Math.random()*100)+1
-        lista.push(numeroAleatorio)
+
+async function mapearIDsparaUsuarios(ids){
+    const usuarios = []
+
+    for(let i = 0;i < ids.length; i++){
+        const id = ids[i]
+        const usuario = await ID(id)
+        usuarios.push(usuario)
     }
-    console.log(lista)
-    lista.map(function (elementoAtual){
-        console.log(ID(elementoAtual))
-    })
-    
+
+    return usuarios
 }
-IDsQualquer()
+
+async function Exemplo(){
+    const ids = [18, 32, 77, 55,75]
+    const usuarios = await mapearIDsparaUsuarios(ids)
+    console.log(usuarios)
+}
+Exemplo()
