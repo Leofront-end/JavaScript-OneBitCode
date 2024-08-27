@@ -7,7 +7,21 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Criação e Listagem de Post</h1>
+
+    <h2>Novo post</h2>
+    <form id="postForm">
+      <label for="title">Título do Post:</label><br>
+      <input type="text" id="title" required><br>
+      <label for="body">Conteudo do Post:</label>
+      <textarea id="body" cols="50" rows="5" required></textarea><br>
+      <button type="submit">Criar Post</button>
+    </form>
+
+    <h2>Posts</h2>
+    <ul id="postsList">
+      <p>A lista está vazia</p>
+    </ul>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
