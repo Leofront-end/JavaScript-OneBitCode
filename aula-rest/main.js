@@ -25,8 +25,6 @@ async function criarPost(title, body){
     },
     body: JSON.stringify({ title, body})
   })
-
-  console.log(resposta)
 }
 
 async function carregarPosts() {
@@ -34,4 +32,13 @@ async function carregarPosts() {
   const posts = await resposta.json()
 
   console.log(posts)
+  exibirPosts(posts)
+}
+
+function exibirPosts(posts){
+  postsList.innerHTML = ""
+  posts.forEach(function (post) {
+    const listItem = document.createElement("li")
+    listItem.innerHTML = `<article><h3>${post.title}</h3><p>${post.body}</p></article>`
+  })
 }
