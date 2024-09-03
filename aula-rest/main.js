@@ -25,6 +25,14 @@ async function criarPost(title, body){
     },
     body: JSON.stringify({ title, body})
   })
+
+  if (!resposta.ok) {
+    console.log(`Um erro ocorreu! ${resposta.status} - ${resposta.statusText}`)
+  } else {
+    carregarPosts()
+  }
+
+  
 }
 
 async function carregarPosts() {
@@ -39,6 +47,7 @@ function exibirPosts(posts){
   postsList.innerHTML = ""
   posts.forEach(function (post) {
     const listItem = document.createElement("li")
-    listItem.innerHTML = `<article><h3>${post.title}</h3><p>${post.body}</p></article>`
+    listItem.innerHTML = `<article><h3>${post.title}</h3><p>${post.body}</p></article><hr>`
+    postsList.appendChild(listItem)
   })
 }
