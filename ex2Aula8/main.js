@@ -5,6 +5,8 @@ const paginaAtualInput = document.getElementById("paginaAtual")
 const totalPaginasInput = document.getElementById("totalPaginas")
 const livrosList = document.getElementById("livrosList")
 
+
+
 carregarLivros()
 
 livrosForm.addEventListener("submit", function (evento){
@@ -15,16 +17,17 @@ livrosForm.addEventListener("submit", function (evento){
     const paginaAtual = paginaAtualInput.value
     const totalPaginas = totalPaginasInput.value
 
+
     criarLivro(title, genero, paginaAtual, totalPaginas)
 })
 
-async function criarLivro(title, genero, paginaAtual, totalPaginas) {
+async function criarLivro(title, genero, paginaAtual, totalPaginas,) {
     const resposta = await fetch("http://localhost:3000/Livros", {
         method: "POST",
         headers: {
             'Content-Type': "apllication/json"
         },
-        body: JSON.stringify({title, genero, paginaAtual,totalPaginas})
+        body: JSON.stringify({title, genero, paginaAtual,totalPaginas,})
     })
 
     if (!resposta.ok) {
@@ -46,11 +49,14 @@ function exibirLivros(livros){
     livrosList.innerHTML = ""
     livros.forEach(function (livro){
         const listarItem = document.createElement("li")
-        listarItem.innerHTML = `<article><h3>${livro.title}</h3><p>Genero: ${livro.genero}</p><p>Pagina atual: ${livro.paginaAtual}</p><p>Total de paginas: ${livro.totalPaginas}</p><button>${livro.deletarLivro}</button></article><hr>`
+        listarItem.innerHTML = `<article><h3>${livro.title}</h3><p>Genero: ${livro.genero}</p><p>Pagina atual: ${livro.paginaAtual}</p><p>Total de paginas: ${livro.totalPaginas}</p><buton>oi</button></article><hr>`
         livrosList.appendChild(listarItem)
 
         if (livro.paginaAtual == livro.totalPaginas){
             listarItem.style.backgroundColor = '#3cf13c54'
         }
+
+       
     })
 }
+
