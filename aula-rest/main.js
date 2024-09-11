@@ -32,7 +32,6 @@ async function criarPost(title, body){
     carregarPosts()
   }
 
-  
 }
 
 async function carregarPosts() {

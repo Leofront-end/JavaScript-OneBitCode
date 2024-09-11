@@ -1,13 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Criação e Listagem de Livros</h1>
+
+    
+    <form id="livroForm">
+      <h2>Novo livro</h2>
+      <label for="title">Titulo do Livro: </label>
+      <input type="text" id="title" required>
+      <label for="genero">Genero: </label>
+      <input type="text" id="genero">
+      <label for="paginaAtual">Pagina atual: </label>
+      <input type="number" id="paginaAtual" required>
+      <label for="totalPaginas">Total de paginas: </label>
+      <input type="number" id="totalPaginas" required>
+      <button type="submit">Criar</button>
+    </form>
+
+    <h2>Lista de Livros: </h2>
+    <ul id="livrosList">
+      <p>A lista está vazia :[</p>
+    </ul>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

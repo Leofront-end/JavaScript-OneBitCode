@@ -1,0 +1,25 @@
+h1,h2,input,label,button,p{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+form {
+    padding: 5px;
+    background-color: rgba(174, 115, 230, 0.178);
+    margin: 30px;
+    border-radius: 25px;
+}
+
+input{
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+button {
+    background-color: rgba(153, 53, 247, 0.178);
+    width: 100px;
+    padding: 20px;
+    border: none;
+    border-radius: 25px;
+
+}
