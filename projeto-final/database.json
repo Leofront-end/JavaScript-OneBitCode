@@ -1,4 +1,20 @@
 {
-    "questions": [],
-    "results": []
+  "questions": [],
+  "results": [
+    {
+      "id": "9c67",
+      "name": "Backend",
+      "description": "Você seria um dev backend"
+    },
+    {
+      "id": "0cf6",
+      "name": "Front-End",
+      "description": "Você seria um dev front-end"
+    },
+    {
+      "id": "67cb",
+      "name": "Mobile",
+      "description": "Você é um dev Mobile"
+    }
+  ]
 }

@@ -51,7 +51,7 @@ export function option(text, { selected, disabled, value } = {}){
 }
 
 export function button(text ,{type, className , onClick } = {type:"submit"}){
-    const button = createElement("button")
+    const button = document.createElement("button")
     button.type = type
     button.textContent = text
     button.className = className
