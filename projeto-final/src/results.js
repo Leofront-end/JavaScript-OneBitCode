@@ -12,6 +12,8 @@ export async function loadResults(ul) {
         })
 
         const deleteBtn = button("Excluir Resultado", {
+            type: "button",
+            className: "",
             onClick: async () => {
                 await deleteResult(result.id)
                 li.remove()
