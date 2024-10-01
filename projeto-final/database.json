@@ -1,18 +1,7 @@
 {
   "questions": [
     {
-      "id": "bef9",
-      "text": "Escreva sua pergunta",
-      "points": {
-        "fullyDesagree": null,
-        "partiallyDesagree": null,
-        "dontKnow": null,
-        "partiallyAgree": null,
-        "fullyAgree": null
-      }
-    },
-    {
-      "id": "56b3",
+      "id": "7ae7",
       "text": "Escreva sua pergunta",
       "points": {
         "fullyDesagree": null,
