@@ -3,16 +3,16 @@
     {
       "text": "Teste de Pergunta",
       "points": {
-        "fullyDisagree": "0cf6",
-        "partiallyDisagree": "b79d",
-        "dontKnow": null,
-        "partiallyAgree": "67cb",
-        "fullyAgree": "0cf6"
+        "fullyDisagree": 1,
+        "partiallyDisagree": 3,
+        "dontKnow": 2,
+        "partiallyAgree": 1,
+        "fullyAgree": 3
       },
-      "id": "7ae7"
+      "id": 2
     },
     {
-      "id": "7d52",
+      "id": 5,
       "text": "Escreva sua pergunta",
       "points": {
         "fullyDesagree": null,
@@ -25,17 +25,17 @@
   ],
   "results": [
     {
-      "id": "0cf6",
+      "id": 2,
       "name": "Front-End",
       "description": "Você seria um dev front-end"
     },
     {
-      "id": "67cb",
+      "id": 3,
       "name": "Mobile",
       "description": "Você é um dev Mobile"
     },
     {
-      "id": "b79d",
+      "id": 1,
       "name": "back-end",
       "description": "Você é um dev back end"
     }
