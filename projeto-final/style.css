@@ -139,6 +139,7 @@ button.selected {
 
 .inline-block {
   display: inline-block;
+  margin-top: 1rem;
 }
 
 .inline-block + .inline-block {
@@ -182,8 +183,8 @@ footer {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #51a0e6;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #000000b0;
   }
   a:hover {
     color: #747bff;
