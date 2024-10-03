@@ -20,6 +20,22 @@ export async function loadQuestions(quizElement) {
         questionContainer.append(textElement, alternatives)
         quizElement.append(questionContainer)
     });
+
+    const finishBtnContainer = div({ className: "finish-btn-container"})
+    const finishBtn = button("Ver meu resultado!", {
+        className: "finish-btn",
+        onClick: async () => {
+            const result = await calculateResults(questions, answers)
+            quizElement.innerHtml = `<div class="result"><h2>Seu resultado foi ${result.name}!<h2><p>${result.description}</p></div>`
+        }
+    })
+
+    finishBtnContainer.append(finishBtn)
+    quizElement.append(finishBtnContainer)
+}
+
+async function calculateResults(question, answer) {
+    
 }
 
 function createAlternativeBtns(question, answers) {
@@ -73,5 +89,9 @@ function createAlternativeBtns(question, answers) {
 }
 
 function handleSelectAlternative(event) {
-    event.target.parentElement.childNodes.forEach()
+    const clickedBtn = event.target
+    clickedBtn.parentElement.childNodes.forEach((node) => {
+        node.classList.remove("selected")
+    })
+    clickedBtn.classList.add("selected")
 }
