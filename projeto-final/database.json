@@ -9,10 +9,10 @@
         "partiallyAgree": 1,
         "fullyAgree": 3
       },
-      "id": 2
+      "id": "2"
     },
     {
-      "id": 5,
+      "id": "5",
       "text": "Escreva sua pergunta",
       "points": {
         "fullyDesagree": null,
@@ -21,21 +21,32 @@
         "partiallyAgree": null,
         "fullyAgree": null
       }
+    },
+    {
+      "id": "4f96",
+      "text": "Escreva sua pergunta...",
+      "points": {
+        "fullyDisagree": null,
+        "partiallyDisagree": null,
+        "dontKnow": null,
+        "partiallyAgree": null,
+        "fullyAgree": null
+      }
     }
   ],
   "results": [
     {
-      "id": 2,
+      "id": "2",
       "name": "Front-End",
       "description": "Você seria um dev front-end"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Mobile",
       "description": "Você é um dev Mobile"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "back-end",
       "description": "Você é um dev back end"
     }

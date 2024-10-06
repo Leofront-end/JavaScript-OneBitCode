@@ -12,7 +12,6 @@ export async function loadQuestions(quizElement) {
 
         const alternatives = div({ className: "" })
         const alternativeBtns = createAlternativeBtns(question, answers)
-        console.log(alternativeBtns)
         //operador spread
         //alternatives.append(alternativeBtns[0],alternativeBtns[1],alternativeBtns[2],alternativeBtns[3],alternativeBtns[4])
         alternatives.append(...alternativeBtns)
@@ -34,8 +33,31 @@ export async function loadQuestions(quizElement) {
     quizElement.append(finishBtnContainer)
 }
 
-async function calculateResults(question, answer) {
-    
+async function calculateResults(questions, answers) {
+    const results = []
+
+    for (let i = 0; i < questions.length; i++) {
+        const question = questions[i]
+        const answer = answers[i]
+        results.push(question.points[answer.answer]) // ex.: question.points["fullyDisagree"]
+    }
+
+    const resultsCount = {}
+    results.forEach((result) => resultsCount[result] = (resultsCount[result] || 0 ) + 1)
+
+    let winnerResult
+    let highestCount = 0
+
+    // Verifica cada pasagem em um OBJETO
+    for (let result in resultsCount) {
+        if (resultsCount[result] > highestCount) {
+            winnerResult = result
+            highestCount = resultsCount[result]
+        }
+    }
+
+    console.log(winnerResult)
+    console.log(results)
 }
 
 function createAlternativeBtns(question, answers) {
@@ -46,7 +68,6 @@ function createAlternativeBtns(question, answers) {
     fullyDisagreeBtn.addEventListener("click", () => {
         const currentAnswer = answers.find((answer) => answer.questionId === question.id)
         currentAnswer.answer = "fullyDisagree"
-        console.log(answers)
     })
 
     const partiallyDisagreeBtn = button("Discordo Parcialmente", {

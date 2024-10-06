@@ -8,11 +8,11 @@ export async function createEmptyQuestion(managerElement, results) {
 }
 
 export async function loadQuestionManager(managerElement) {
-    managerElement.innerHtml = ""
+    managerElement.innerHTML = ""
     const questions = await fetchQuestions()
     const results = await fetchResults()
 
-    questions.forEach((question) => createQuestionForm(managerElement, question,results))
+    questions.forEach((question) => createQuestionForm(managerElement, question, results))
 }
 
 function createQuestionForm(managerElement, question, results){
@@ -33,55 +33,55 @@ function createQuestionForm(managerElement, question, results){
         points.fullyAgree = +formData.get("fullyAgree")
 
         await updateQuestion(question.id, text, points)
-        alert("Pergunta atualizada com sucesso")
+        alert("Pergunta atualizada com sucesso!")
     })
 
     const questionFormTitle = h3(`Pergunta ${question.id}`)
-    const questionTextLabel = label("Texto da Pergunta", `question-${question.id}-text`)
+    const questionTextLabel = label("Texto da Pergunta:", `question-${question.id}-text`)
     const questionTextInput = input("text", {
         id: `question-${question.id}-text`,
         name: "text",
         value: question.text
     })
 
-    const fullyDisagreeField = createAlternativeField( {
+    const fullyDisagreeField = createAlternativeField({
         labelText: "Discordo Completamente",
         fieldId: `question-${question.id}-fully-disagree`,
         fieldName: "fullyDisagree"
-    },question, results)
+    }, question, results)
 
-    const partiallyDisagreeField = createAlternativeField( {
+    const partiallyDisagreeField = createAlternativeField({
         labelText: "Discordo Parcialmente",
         fieldId: `question-${question.id}-partially-disagree`,
         fieldName: "partiallyDisagree"
-    },question, results)
+    }, question, results)
 
-    const dontKnowField = createAlternativeField( {
+    const dontKnowField = createAlternativeField({
         labelText: "Não Sei",
         fieldId: `question-${question.id}-dont-know`,
         fieldName: "dontKnow"
-    },question, results)
+    }, question, results)
 
-    const partiallyAgreeField = createAlternativeField( {
+    const partiallyAgreeField = createAlternativeField({
         labelText: "Concordo Parcialmente",
         fieldId: `question-${question.id}-partially-agree`,
         fieldName: "partiallyAgree"
-    },question, results)
+    }, question, results)
 
-    const fullyAgreeField = createAlternativeField( {
+    const fullyAgreeField = createAlternativeField({
         labelText: "Concordo Completamente",
         fieldId: `question-${question.id}-fully-agree`,
         fieldName: "fullyAgree"
-    },question, results)
+    }, question, results)
 
-    const buttonGroup = div({className: "button-group"})
+    const buttonGroup = div({ className: "button-group" })
 
-    const submitBtn = button("Salvar Pergunta", {type: "submit"})
+    const submitBtn = button("Salvar Pergunta", { type: "submit" })
     const deleteBtn = button("Excluir Pergunta", {
         type: "button",
         onClick: async () => {
-            await deleteQuestion(question.id)
-            questionForm.remove()
+        await deleteQuestion(question.id)
+        questionForm.remove()
         }
     })
 
@@ -96,9 +96,9 @@ function createQuestionForm(managerElement, question, results){
         dontKnowField,
         partiallyAgreeField,
         fullyAgreeField,
-        buttonGroup,
-    
+        buttonGroup
     )
+
     managerElement.append(questionForm)
 }
 
