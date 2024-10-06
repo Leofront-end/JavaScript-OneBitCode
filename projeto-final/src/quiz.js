@@ -16,6 +16,7 @@ export async function loadQuestions(quizElement) {
     // alternatives.append(alternativeBtns[0], alternativeBtns[1], alternativeBtns[2], ....)
     alternatives.append(...alternativeBtns)
 
+<<<<<<< HEAD
     if (index > 0) {
       const goBackBtn = button("Voltar à pergunta anterior", { onClick: scrollToPreviousQuestion })
       questionContainer.append(goBackBtn)
@@ -65,6 +66,11 @@ async function calculateResults(questions, answers) {
 
   const result = await findResult(winnerResult)
   return result
+=======
+        questionContainer.append(textElement, alternatives)
+        quizElement.append(questionContainer)
+    });
+>>>>>>> parent of 088a26a (projeto-final)
 }
 
 // answer = { questionId: 1, answer: "fullyDisagree" }
@@ -118,9 +124,13 @@ function createAlternativeBtns(question, answers) {
 }
 
 function handleSelectAlternative(event) {
+<<<<<<< HEAD
   const clickedBtn = event.target
   clickedBtn.parentElement.childNodes.forEach((node) => {
     node.classList.remove("selected")
   })
   clickedBtn.classList.add("selected")
+=======
+    event.target.parentElement.childNodes.forEach()
+>>>>>>> parent of 088a26a (projeto-final)
 }
