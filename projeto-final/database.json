@@ -3,9 +3,9 @@
     {
       "text": "Teste de Pergunta",
       "points": {
-        "fullyDisagree": 2,
-        "partiallyDisagree": 2,
-        "dontKnow": 1,
+        "fullyDisagree": 3,
+        "partiallyDisagree": 0,
+        "dontKnow": 0,
         "partiallyAgree": 0,
         "fullyAgree": 0
       },
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "039b",
+      "id": "1b09",
       "text": "Escreva sua pergunta...",
       "points": {
         "fullyDisagree": null,
