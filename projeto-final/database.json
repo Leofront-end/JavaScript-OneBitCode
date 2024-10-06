@@ -4,10 +4,10 @@
       "text": "Teste de Pergunta",
       "points": {
         "fullyDisagree": 1,
-        "partiallyDisagree": 3,
-        "dontKnow": 2,
-        "partiallyAgree": 1,
-        "fullyAgree": 3
+        "partiallyDisagree": 0,
+        "dontKnow": 0,
+        "partiallyAgree": 0,
+        "fullyAgree": 0
       },
       "id": "2"
     },
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "4f96",
+      "id": "6",
       "text": "Escreva sua pergunta...",
       "points": {
         "fullyDisagree": null,
