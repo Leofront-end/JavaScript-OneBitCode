@@ -16,7 +16,10 @@ export async function loadQuestions(quizElement) {
     // alternatives.append(alternativeBtns[0], alternativeBtns[1], alternativeBtns[2], ....)
     alternatives.append(...alternativeBtns)
 
-    
+    if (index > 0 ) {
+      const goBackBtn = button("Voltar a pergunta anterior", {onClick: scrollToPreviousQuestion})
+      questionContainer.append(goBackBtn)
+    }
 
     questionContainer.append(textElement, alternatives)
     quizElement.append(questionContainer)
@@ -120,8 +123,14 @@ function handleSelectAlternative(event) {
     node.classList.remove("selected")
   })
   clickedBtn.classList.add("selected")
+
+  setTimeout(scrollToNextQuestion,250)
 }
 
-function scrollToNextQuestion(){}
+function scrollToNextQuestion(){
+  window.scrollBy({top: document.querySelector(".question").scrollHeight, behavior: "smooth"})
+}
 
-function scrollToPreviousQuestion(){}
+function scrollToPreviousQuestion(){
+  window.scrollBy({top: -document.querySelector(".question").scrollHeight, behavior: "smooth"})
+}

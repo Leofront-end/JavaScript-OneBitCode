@@ -6,32 +6,43 @@
         "fullyDisagree": 2,
         "partiallyDisagree": 3,
         "dontKnow": 0,
+        "partiallyAgree": 1,
+        "fullyAgree": 0
+      },
+      "id": "2"
+    },
+    {
+      "text": "Escreva sua pergunta",
+      "points": {
+        "fullyDisagree": 0,
+        "partiallyDisagree": 0,
+        "dontKnow": 0,
+        "partiallyAgree": 2,
+        "fullyAgree": 0
+      },
+      "id": "5"
+    },
+    {
+      "text": "Escreva sua pergunta...",
+      "points": {
+        "fullyDisagree": 0,
+        "partiallyDisagree": 0,
+        "dontKnow": 0,
+        "partiallyAgree": 2,
+        "fullyAgree": 0
+      },
+      "id": "6"
+    },
+    {
+      "text": "Escreva sua pergunta...",
+      "points": {
+        "fullyDisagree": 2,
+        "partiallyDisagree": 0,
+        "dontKnow": 1,
         "partiallyAgree": 0,
         "fullyAgree": 0
       },
-      "id": 2
-    },
-    {
-      "id": 5,
-      "text": "Escreva sua pergunta",
-      "points": {
-        "fullyDesagree": null,
-        "partiallyDesagree": null,
-        "dontKnow": null,
-        "partiallyAgree": null,
-        "fullyAgree": null
-      }
-    },
-    {
-      "id": 6,
-      "text": "Escreva sua pergunta...",
-      "points": {
-        "fullyDisagree": null,
-        "partiallyDisagree": null,
-        "dontKnow": null,
-        "partiallyAgree": null,
-        "fullyAgree": null
-      }
+      "id": "5269"
     }
   ],
   "results": [
