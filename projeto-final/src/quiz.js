@@ -16,8 +16,8 @@ export async function loadQuestions(quizElement) {
     // alternatives.append(alternativeBtns[0], alternativeBtns[1], alternativeBtns[2], ....)
     alternatives.append(...alternativeBtns)
 
-    if (index > 0 ) {
-      const goBackBtn = button("Voltar a pergunta anterior", {onClick: scrollToPreviousQuestion})
+    if (index > 0) {
+      const goBackBtn = button("Voltar à pergunta anterior", { onClick: scrollToPreviousQuestion })
       questionContainer.append(goBackBtn)
     }
 
@@ -30,7 +30,29 @@ export async function loadQuestions(quizElement) {
     className: "finish-btn",
     onClick: async () => {
       const result = await calculateResults(questions, answers)
-      quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><p>${result.description}</p></div>`
+      switch (result.name){
+        case "Desenvolvedor Full-stack":
+          quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><img src="../img/Fullstack.jpg" alt="Imagem Fullstack"><p>${result.description}</p></div>`
+          break;
+
+        case "Desenvolvedor Back-end":
+          quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><img src="../img/Back-end.jpg" alt="Imagem Back-end"><p>${result.description}</p></div>`
+          break;
+
+        case "Desenvolvedor Front-end":
+          quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><img src="../img/Front-end.jpg" alt="Imagem Front-End"><p>${result.description}</p></div>`
+          break;
+
+        case "Desenvolvedor Mobile":
+          quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><img src="../img/Mobile.jpg" alt="Imagem Mobile"><p>${result.description}</p></div>`
+          break;
+
+        case "Analista de Dados":
+          quizElement.innerHTML = `<div class="result"><h2>Seu resultado foi: ${result.name}!</h2><img src="../img/AnalistaDeDados.jpg" alt="Imagem AnalistaDeDados"><p>${result.description}</p></div>`
+          break;
+        default:
+          quizElement.innerHTML = "<h2>Tente novamente</h2>"
+      }
     }
   })
 
@@ -124,13 +146,13 @@ function handleSelectAlternative(event) {
   })
   clickedBtn.classList.add("selected")
 
-  setTimeout(scrollToNextQuestion,250)
+  setTimeout(scrollToNextQuestion, 250)
 }
 
-function scrollToNextQuestion(){
-  window.scrollBy({top: document.querySelector(".question").scrollHeight, behavior: "smooth"})
+function scrollToNextQuestion() {
+  window.scrollBy({ top: document.querySelector(".question").scrollHeight, behavior: "smooth"})
 }
 
-function scrollToPreviousQuestion(){
-  window.scrollBy({top: -document.querySelector(".question").scrollHeight, behavior: "smooth"})
+function scrollToPreviousQuestion() {
+  window.scrollBy({ top: -document.querySelector(".question").scrollHeight, behavior: "smooth"})
 }
