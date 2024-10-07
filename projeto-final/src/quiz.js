@@ -123,3 +123,5 @@ function handleSelectAlternative(event) {
 }
 
 function scrollToNextQuestion(){}
+
+function scrollToPreviousQuestion(){}

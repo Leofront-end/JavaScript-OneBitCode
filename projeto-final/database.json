@@ -4,15 +4,15 @@
       "text": "Teste de Pergunta",
       "points": {
         "fullyDisagree": 2,
-        "partiallyDisagree": 0,
+        "partiallyDisagree": 3,
         "dontKnow": 0,
         "partiallyAgree": 0,
         "fullyAgree": 0
       },
-      "id": "2"
+      "id": 2
     },
     {
-      "id": "5",
+      "id": 5,
       "text": "Escreva sua pergunta",
       "points": {
         "fullyDesagree": null,
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "1b09",
+      "id": 6,
       "text": "Escreva sua pergunta...",
       "points": {
         "fullyDisagree": null,
@@ -36,17 +36,17 @@
   ],
   "results": [
     {
-      "id": "2",
+      "id": 2,
       "name": "Front-End",
       "description": "Você seria um dev front-end"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Mobile",
       "description": "Você é um dev Mobile"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "back-end",
       "description": "Você é um dev back end"
     }
